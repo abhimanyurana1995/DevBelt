@@ -1,91 +1,5 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Mobile responsive ── */
-@media (max-width: 640px) {
-  body { overflow: auto; }
-
-  #app { flex-direction: column; height: auto; min-height: 100vh; }
-
-  #sidebar {
-    width: 100%;
-    flex-direction: row;
-    border-right: none;
-    border-bottom: 1px solid #1e3a5f;
-    flex-shrink: 0;
-  }
-
-  #logo {
-    padding: 10px 12px;
-    font-size: 14px;
-    border-bottom: none;
-    border-right: 1px solid #1e3a5f;
-    white-space: nowrap;
-    writing-mode: horizontal-tb;
-  }
-
-  #tool-list {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 0;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  #tool-list::-webkit-scrollbar { display: none; }
-
-  .nav-item {
-    flex-direction: column;
-    padding: 8px 10px;
-    gap: 3px;
-    border-left: none;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
-    min-width: fit-content;
-  }
-  .nav-item.active {
-    border-left-color: transparent;
-    border-bottom-color: #00d4ff;
-  }
-  .nav-name { font-size: 11px; }
-
-  #content { overflow: auto; }
-
-  #tool-container { padding: 16px 12px; }
-
-  .tool-panel h2 { font-size: 16px; margin-bottom: 12px; }
-
-  .tool-row {
-    flex-direction: column;
-    height: auto;
-    gap: 12px;
-  }
-
-  .col { flex: none; }
-
-  textarea { min-height: 140px; flex: none; height: 140px; }
-
-  pre {
-    flex: none;
-    min-height: 100px;
-    max-height: 200px;
-  }
-
-  .diff-output { height: 160px; }
-
-  .tool-row .highlighted-text { min-height: 100px; max-height: 160px; }
-
-  .match-list { max-height: 140px; }
-
-  .markdown-preview { min-height: 200px; }
-
-  .color-swatch { height: 70px; }
-
-  .input-group { flex-wrap: wrap; }
-  .input-group input { min-width: 0; }
-
-  button { padding: 8px 12px; font-size: 13px; }
-}
-
 body {
   font-family: 'Consolas', 'Courier New', monospace;
   background: #0f0f1a;
@@ -262,3 +176,89 @@ button.sm { padding: 3px 8px; font-size: 11px; }
 .markdown-preview em { color: #ccc; }
 .markdown-preview blockquote { border-left: 3px solid #1e3a5f; padding-left: 12px; color: #888; margin: 8px 0; }
 .markdown-preview hr { border: none; border-top: 1px solid #1e3a5f; margin: 16px 0; }
+
+/* ── Mobile responsive ── */
+@media (max-width: 640px) {
+  body { overflow: auto; }
+
+  #app { flex-direction: column; height: auto; min-height: 100vh; }
+
+  #sidebar {
+    width: 100%;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid #1e3a5f;
+    flex-shrink: 0;
+  }
+
+  #logo {
+    padding: 10px 12px;
+    font-size: 14px;
+    border-bottom: none;
+    border-right: 1px solid #1e3a5f;
+    white-space: nowrap;
+    writing-mode: horizontal-tb;
+  }
+
+  #tool-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  #tool-list::-webkit-scrollbar { display: none; }
+
+  .nav-item {
+    flex-direction: column;
+    padding: 8px 10px;
+    gap: 3px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    min-width: fit-content;
+  }
+  .nav-item.active {
+    border-left-color: transparent;
+    border-bottom-color: #00d4ff;
+  }
+  .nav-name { font-size: 11px; }
+
+  #content { overflow: auto; }
+
+  #tool-container { padding: 16px 12px; }
+
+  .tool-panel h2 { font-size: 16px; margin-bottom: 12px; }
+
+  .tool-row {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+
+  .col { flex: none; }
+
+  textarea { min-height: 140px; flex: none; height: 140px; }
+
+  pre {
+    flex: none;
+    min-height: 100px;
+    max-height: 200px;
+  }
+
+  .diff-output { height: 160px; }
+
+  .tool-row .highlighted-text { min-height: 100px; max-height: 160px; }
+
+  .match-list { max-height: 140px; }
+
+  .markdown-preview { min-height: 200px; }
+
+  .color-swatch { height: 70px; }
+
+  .input-group { flex-wrap: wrap; }
+  .input-group input { min-width: 0; }
+
+  button { padding: 8px 12px; font-size: 13px; }
+}
